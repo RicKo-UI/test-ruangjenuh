@@ -17,7 +17,7 @@
         <nav class="sb-topnav navbar navbar-expand navbar-dark py-5" style="background-color: #605CA8;">
             <div class="container-fluid">
                 <!-- Navbar Brand -->
-                <a class="navbar-brand ps-3 d-flex align-items-center" href="index.html">
+                <a class="navbar-brand ps-3 d-flex align-items-center" href="/">
                     <div class="bg-white d-flex align-items-center justify-content-center me-2 rounded" style="width: 40px; height: 40px;"></div>
                     <span>Ruang Jenuh</span>
                 </a>
@@ -180,37 +180,24 @@
                                 <h4>Product List</h4>
                             </div>
                             <div class="card-body">
-                                <table id="datatablesSimple">
-                                    <thead>
-                                        <tr>
-                                            <th>Date</th>
-                                            <th>Category</th>
-                                            <th>Product Name</th>
-                                            <th>Container</th>
-                                            <th>Weight</th>
-                                            <th>Opening</th>
-                                            <th>Add</th>
-                                            <th>Closing</th>
-                                            <th>Warning</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Date</th>
-                                            <th>Category</th>
-                                            <th>Product Name</th>
-                                            <th>Container</th>
-                                            <th>Weight</th>
-                                            <th>Opening</th>
-                                            <th>Add</th>
-                                            <th>Closing</th>
-                                            <th>Warning</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        
-                                    </tbody>
-                                </table>
+                                <div id="table-container">
+                                    <table id="datatablesSimple" class="d-none">
+                                        <thead>
+                                            <tr>
+                                                <th>Date</th>
+                                                <th>Category</th>
+                                                <th>Product Name</th>
+                                                <th>Container</th>
+                                                <th>Weight</th>
+                                                <th>Opening</th>
+                                                <th>Add</th>
+                                                <th>Closing</th>
+                                                <th>Warning</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                         <!-- End Table -->
