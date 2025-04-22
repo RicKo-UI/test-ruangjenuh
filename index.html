@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dashboard - SB Admin</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="custom.css">
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark py-5" style="background-color: #605CA8;">
+            <div class="container-fluid">
+                <!-- Navbar Brand -->
+                <a class="navbar-brand ps-3 d-flex align-items-center" href="index.html">
+                    <div class="bg-white d-flex align-items-center justify-content-center me-2 rounded" style="width: 40px; height: 40px;"></div>
+                    <span>Ruang Jenuh</span>
+                </a>
+                
+                <div class="flex-grow-1 d-lg-none"></div>
+                
+                <!-- Navbar Profile -->
+                <div class="d-flex ms-lg-auto order-lg-2">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center" href="update-profile.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 24 24" fill="currentColor" class="me-2">
+                                    <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="d-none d-lg-inline">Dewi Irwan</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        
+                <!-- Sidebar Toggle -->
+                <button class="btn btn-link btn-md d-lg-none me-2 text-white order-lg-1 fs-4" id="sidebarToggle">
+                    <i class="fi fi-rr-menu-burger"></i>
+                </button>
+            </div>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav" class="mt-5 pt-2">
+                <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <!-- Brand Info with Profile Image -->
+                            <div class="px-3 py-4 border-bottom d-flex align-items-center">
+                                <!-- Profile Image Placeholder -->
+                                <div class="me-3">
+                                    <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center py-2 px-2" style="width: 48px; height: 48px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#D9D9D9" className="size-6">
+                                            <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clipRule="evenodd" />
+                                          </svg>
+                                          
+                                    </div>
+                                </div>
+                                
+                                <!-- Brand Text -->
+                                <div>
+                                    <div class="fw-bold">Ruang Jenuh</div>
+                                    <div class="small text-success d-flex align-items-center">
+                                        <span class="dot bg-success me-1" style="width: 8px; height: 8px; border-radius: 50%; display: inline-block;"></span>
+                                        Online
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Menu Items -->
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon fs-5"><i class="fi fi-sr-home"></i></div>
+                                Dashboard
+                            </a>
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon fs-5"><i class="fi fi-sr-calendar"></i></div>
+                                Calendar
+                            </a>
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon fs-5"><i class="fi fi-sr-clock-five"></i></div>
+                                Attendance
+                            </a>
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon fs-5"><i class="fi fi-sr-users-alt"></i></div>
+                                Employee
+                            </a>
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon fs-5"><i class="fi fi-sr-briefcase"></i></div>
+                                Business
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main class="mt-5">
+                    <div class="container-fluid px-4">
+                        <!-- Breadcrumb -->
+                        <nav aria-label="breadcrumb" class="mb-3 mt-4">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                            </ol>
+                        </nav>
+                        <h3 class="mb-4">Dashboard</h3>
+                        <!-- Card -->
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card shadow-sm bg-white mb-4">
+                                    <div class="card-body d-flex align-items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="80" fill="#605CA8" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                                            <path fillRule="evenodd" d="M8.25 6.75a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0ZM15.75 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM2.25 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM6.31 15.117A6.745 6.745 0 0 1 12 12a6.745 6.745 0 0 1 6.709 7.498.75.75 0 0 1-.372.568A12.696 12.696 0 0 1 12 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 0 1-.372-.568 6.787 6.787 0 0 1 1.019-4.38Z" clipRule="evenodd" />
+                                            <path d="M5.082 14.254a8.287 8.287 0 0 0-1.308 5.135 9.687 9.687 0 0 1-1.764-.44l-.115-.04a.563.563 0 0 1-.373-.487l-.01-.121a3.75 3.75 0 0 1 3.57-4.047ZM20.226 19.389a8.287 8.287 0 0 0-1.308-5.135 3.75 3.75 0 0 1 3.57 4.047l-.01.121a.563.563 0 0 1-.373.486l-.115.04c-.567.2-1.156.349-1.764.441Z" />
+                                        </svg>
+                                          
+                                        <div class="ms-3">
+                                            <p class="mb-1 text-dark">Total Employees</p>
+                                            <h3 class="mb-0 text-dark">16</h3>
+                                            <small class="text-muted">More info <i class="fi fi-rr-info"></i></small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card shadow-sm bg-white mb-4">
+                                    <div class="card-body d-flex align-items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="80" fill="#49A97B" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                                            <path d="M12.378 1.602a.75.75 0 0 0-.756 0L3 6.632l9 5.25 9-5.25-8.622-5.03ZM21.75 7.93l-9 5.25v9l8.628-5.032a.75.75 0 0 0 .372-.648V7.93ZM11.25 22.18v-9l-9-5.25v8.57a.75.75 0 0 0 .372.648l8.628 5.033Z" />
+                                        </svg>
+                                          
+                                          
+                                        <div class="ms-3">
+                                            <p class="mb-1 text-dark">Total Products</p>
+                                            <h3 class="mb-0 text-dark">10</h3>
+                                            <small class="text-muted">More info <i class="fi fi-rr-info"></i></small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card shadow-sm bg-white mb-4">
+                                    <div class="card-body d-flex align-items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="80" fill="#F9BE12" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                                            <path d="M2.273 5.625A4.483 4.483 0 0 1 5.25 4.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0 0 18.75 3H5.25a3 3 0 0 0-2.977 2.625ZM2.273 8.625A4.483 4.483 0 0 1 5.25 7.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0 0 18.75 6H5.25a3 3 0 0 0-2.977 2.625ZM5.25 9a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h13.5a3 3 0 0 0 3-3v-6a3 3 0 0 0-3-3H15a.75.75 0 0 0-.75.75 2.25 2.25 0 0 1-4.5 0A.75.75 0 0 0 9 9H5.25Z" />
+                                        </svg>                                                                                    
+                                          
+                                        <div class="ms-3">
+                                            <p class="mb-1 text-dark">Total Assets</p>
+                                            <h3 class="mb-0 text-dark">3</h3>
+                                            <small class="text-muted">More info <i class="fi fi-rr-info"></i></small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card shadow-sm bg-white mb-4">
+                                    <div class="card-body d-flex align-items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="80" fill="#A42626" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                            <path fill-rule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" />
+                                          </svg>                                          
+                                          
+                                        <div class="ms-3">
+                                            <p class="mb-1 text-dark">Low Product Today</p>
+                                            <h3 class="mb-0 text-dark">0</h3>
+                                            <small class="text-muted">More info <i class="fi fi-rr-info"></i></small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Card -->
+
+                        <!-- Table -->
+                        <div class="card mb-4 border-0">
+                            <div class="card-header border-0">
+                                <h4>Product List</h4>
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Category</th>
+                                            <th>Product Name</th>
+                                            <th>Container</th>
+                                            <th>Weight</th>
+                                            <th>Opening</th>
+                                            <th>Add</th>
+                                            <th>Closing</th>
+                                            <th>Warning</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Category</th>
+                                            <th>Product Name</th>
+                                            <th>Container</th>
+                                            <th>Weight</th>
+                                            <th>Opening</th>
+                                            <th>Add</th>
+                                            <th>Closing</th>
+                                            <th>Warning</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- End Table -->
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="small text-center fw-bold">
+                            <div class="text-muted">Copyright &copy; 2021 Ruang Jenuh</div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>
